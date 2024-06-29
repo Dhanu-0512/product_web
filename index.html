@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+      body {
+        font-family: "Lato", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="menu-icon" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="brand-name">VENIA</div>
+        <nav>
+          <ul class="nav-links" id="navLinks">
+            <li>
+              <a href="#home" class="active" onclick="closeMenu()">Home</a>
+            </li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Smart Gear</a></li>
+            <li><a href="#">Accessories</a></li>
+          </ul>
+        </nav>
+        <div class="cart-icon">
+          <a href="#"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="meansOutwear">
+        <div class="category">Men's</div>
+        <div class="category">Outerwear</div>
+        <div class="hrLine"></div>
+      </div>
+      <div class="productImg"></div>
+    </main>
+
+    <div class="product-details">
+      <div class="product-filter">
+        <div class="clothingLabel">
+          Clothing / Women's /<span>Outerwear</span>
+        </div>
+        <div class="filtersLabel" id="filtersLabel">
+          <i class="fa-solid fa-filter filter-sort-icon"></i>Filters
+        </div>
+        <hr />
+        <div id="filterCategory" class="filterCategory">
+          <div class="categoriesLabel">Categories</div>
+          <div id="checkboxContainer"></div>
+          <hr />
+        </div>
+      </div>
+      <div class="products-wrap">
+        <div class="products">
+          <div id="productCount" class="productCount"></div>
+          <div class="inputWrap">
+            <input
+              placeholder="Search by product name"
+              class="inputBox"
+              id="searchInput"
+            />
+            <div id="sortButton">
+              <i class="fa-solid fa-sort filter-sort-icon" id="sortButton"></i
+              >Sort by price
+            </div>
+          </div>
+        </div>
+        <div id="productsContainer" class="products-container"></div>
+        <button id="loadMoreBtn" class="load-more-btn">Load More...</button>
+        <div id="loader" class="loader"></div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-cont-wrap">
+          <div class="footerHead">Account</div>
+          <div class="footerSubHead">Sign in</div>
+          <div class="footerSubHead">Register</div>
+          <div class="footerSubHead">Order Status</div>
+        </div>
+        <div class="footer-cont-wrap">
+          <div class="footerHead">About Us</div>
+          <div class="footerSubHead">Our Story</div>
+          <div class="footerSubHead">Careers</div>
+        </div>
+        <div class="footer-cont-wrap">
+          <div class="footerHead">Help</div>
+          <div class="footerSubHead">Contact Us</div>
+          <div class="footerSubHead">Order Status</div>
+          <div class="footerSubHead">Returns</div>
+        </div>
+        <div class="footer-cont-wrap">
+          <div class="footerHead">Follow Us !</div>
+          <p class="footerSubHead">
+            Lorem ipsum dolor sit amet, consectetur <br />
+            adipiscing elit, sed do eiusmod tempor <br />
+            incididunt ut labore et dolore.
+          </p>
+          <div class="footer-icon">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+        </div>
+      </div>
+      <div class="footerHr"></div>
+      <div class="footer-container">
+        <div class="footer-brand-name">VENIA</div>
+        <div class="footer-address">
+          © Company Name Address Ave, City Name, State ZIP
+        </div>
+        <div class="footer-term-policy-wrap">
+          <a class="footer-terms-policy">Terms of Use</a>
+          <a class="footer-terms-policy">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

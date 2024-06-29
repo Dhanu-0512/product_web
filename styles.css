@@ -1,0 +1,576 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #1363df;
+  color: white;
+  padding: 20px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.brand-name {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: left;
+}
+
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+  font-size: 18px;
+  position: relative;
+  cursor: pointer;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 0;
+  display: inline-block;
+}
+
+nav ul li a.active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.cart-icon a {
+  color: white;
+  font-size: 20px;
+}
+
+main {
+  display: flex;
+}
+
+.meansOutwear {
+  background-color: #1b252c;
+  color: #fff;
+  font-size: 35px;
+  line-height: 30px;
+  font-family: "Times New Roman", Times, serif;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+}
+
+.category {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.hrLine {
+  margin-top: 20px;
+  border: 4px solid #1363df;
+  width: 60px;
+}
+
+.productImg {
+  background-image: url("./assets/productBg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 75%;
+  height: 40vh;
+}
+
+footer {
+  background-color: white;
+  padding: 10px 0;
+  position: static;
+  bottom: 0;
+  width: 100%;
+  border-top: 3px solid #e5e5e7;
+  text-align: left;
+}
+.footerHead {
+  color: #172026;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 1;
+}
+.footerSubHead {
+  color: #545d63;
+  font-size: 16px;
+  opacity: 1;
+  margin-bottom: 5px;
+}
+.footer-icon {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  i {
+    margin-right: 10px;
+  }
+}
+.footerHr {
+  border-top: 1px solid #e5e5e7;
+  margin: 10px 0;
+}
+
+.footer-subCont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-brand-name {
+  color: #181c24;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: left;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.footer-terms-policy {
+  color: #172026;
+  font-size: 16px;
+  text-decoration: underline;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.footer-terms-policy:hover {
+  color: #1363df;
+}
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+  margin-right: 20px;
+}
+.product-details {
+  display: flex;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.product-filter {
+  width: 25%;
+  margin-right: 30px;
+}
+
+.products-wrap {
+  width: 75%;
+  margin-left: 30px;
+}
+
+.clothingLabel {
+  font-size: 17px;
+  color: #1b252c;
+  margin-bottom: 20px;
+  span {
+    color: rgb(142, 142, 142);
+    margin-left: 2px;
+  }
+}
+
+.filter-sort-icon {
+  color: #1363df;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.filtersLabel {
+  color: black;
+  font-size: 20px;
+}
+
+.filterCategory {
+  display: block;
+}
+
+hr {
+  margin: 8px 0px;
+}
+
+.categoriesLabel {
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.checkboxWrap {
+  margin: 10px 0px;
+}
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  user-select: none;
+}
+
+input[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #9d9d9d;
+  border-radius: 3px;
+  background: #fff;
+}
+
+input[type="checkbox"]:checked + label::before {
+  background: #1363df;
+  border-color: #1363df;
+}
+
+input[type="checkbox"]:checked + label::after {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  font-size: 12px;
+  color: #fff;
+}
+.products {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputBox {
+  border: 2px solid rgb(169, 169, 169);
+  border-radius: 5px;
+  width: 250px;
+  height: 40px;
+  padding: 10px;
+  outline: none;
+}
+
+.inputWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+#productsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-height: 4.5em;
+  transition: max-height 0.3s ease;
+  margin-top: 5px;
+}
+
+.show-full-description {
+  -webkit-line-clamp: unset;
+  max-height: none;
+  white-space: normal;
+}
+
+.show-more-btn {
+  background-color: transparent;
+  color: #1363df;
+  border: none;
+  cursor: pointer;
+  margin-top: 8px;
+}
+.product-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 8px 0;
+  color: #0e2c42;
+}
+
+.product-price {
+  font-size: 16px;
+  color: #5c5b5b;
+  font-weight: 700;
+}
+
+.product-description {
+  font-size: 14px;
+  color: #888;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.productCount {
+  text-align: left;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.load-more-btn {
+  background-color: transparent;
+  color: #1363df;
+  border: none;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  margin: 20px auto;
+  display: block;
+}
+
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+.no-data-message {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+  color: #1363df;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .brand-name {
+    text-align: center;
+  }
+
+  .nav-links {
+    display: block;
+    flex-direction: column;
+    position: absolute;
+    background-color: #1363df;
+    top: 70px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .nav-links li {
+    margin: 10px;
+    text-align: center;
+  }
+
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+  }
+
+  nav ul li a.active::after {
+    display: none;
+  }
+
+  .meansOutwear {
+    width: 30%;
+    font-size: 28px;
+  }
+
+  .productImg {
+    width: 70%;
+    height: 40vh;
+  }
+
+  .product-filter {
+    width: 35%;
+    margin-right: 20px;
+  }
+
+  .products-wrap {
+    width: 65%;
+    margin-left: 10px;
+  }
+
+  .inputBox {
+    width: 150px;
+    height: 40px;
+  }
+
+  .clothingLabel {
+    font-size: 17px;
+  }
+
+  #productsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  main {
+    flex-direction: column;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-term-policy-wrap {
+    margin: 10px 0 20px;
+  }
+
+  .footer-terms-policy {
+    order: 1;
+  }
+
+  .footer-address {
+    order: 2;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .footer-brand-name {
+    order: 3;
+  }
+
+  .footer-cont-wrap {
+    margin-bottom: 20px;
+  }
+
+  .productImg {
+    width: 100%;
+    height: 30vh;
+    order: 1;
+    position: relative;
+  }
+
+  .meansOutwear {
+    width: 100%;
+    padding: 20px;
+    order: 2;
+    margin: 0px auto;
+    width: 80%;
+    position: absolute;
+    left: 30px;
+    top: 200px;
+    z-index: 1;
+  }
+
+  .product-details {
+    display: block;
+    margin: 0;
+    margin-top: 120px;
+  }
+
+  .product-filter {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  .products-wrap {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .products {
+    display: block;
+    margin: 20px 0px;
+  }
+
+  .productCount {
+    text-align: center;
+  }
+
+  .inputBox {
+    width: 150px;
+  }
+
+  .filterCategory {
+    display: none;
+  }
+  .filtersLabel {
+    cursor: pointer;
+  }
+
+  #productsContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
